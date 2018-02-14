@@ -1,20 +1,84 @@
 <!DOCTYPE html>
-<html style="height: 100%; width: 100%">
-<head>
-<title>Stone App Technology</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css">
-<meta charset="utf-8">
-</head>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.js"></script>
+        <meta name="theme-color" content="#B0E0E6">
+        <title>Stone App Technology</title>
+        <style>
+            body {
+                min-height: 100vh;
+                padding-bottom:100px; /* footer padding */
+            }
 
-<body>
+            hr {
+                height:2px;
+                border:none;
+                box-sizing: border-box;
+                border-top: solid rgba(0,0,0,0.5) 2px;
+                padding-bottom:25px;
+            }
 
-<body style="margin: 0; height: 100%; width: 100%; font-family: 'Noto Sans TC', sans-serif">
-<div style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center">
-<h1><img style="vertical-align:middle;" alt="logo" src="../my_logo.png" height="100" width="100"</img>Stone App Technology Studio.</h1>
-<p>網頁建置中</p>
-<hr style="width: 60%; opacity: 0.7; margin-bottom: 16px; display: block; border-color:#4fe5ff">
-<p>(c) Copyright 2015-2017 Stone App Technology Studio.</p>
-</div>
-</body>
+            footer {
+                padding-bottom: 25px;
+                width: 100%;
+                position: absolute;
+                bottom:0;
+                }
 
+            .logo {
+                height: 140px;
+                width: 140px;
+                margin-bottom: 1em;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="ts top attached inverted borderless fluid menu">
+            <div class="ts narrow container">
+                <a class="item" href="https://stoneapp.tech"><img src="https://stoneapp.tech/asset/logo.png" alt="logo" style="width:35px;height:35px;margin-right:5px;">Stone App</a>
+                <div class="tablet or large device only right fitted item" data-tooltip-delay="0.1" data-tooltip-type="label" data-tooltip="正在開發中">
+                    <div class="ts disabled underlined inverted input">
+                        <input type="text" placeholder="Username">
+                        <input type="text" placeholder="Password">
+                    </div>
+                    <button class="ts disabled icon button">
+                        <i class="sign in icon"></i>
+                    </button>
+                </div>
+                <div class="mobile only right fitted item">
+                    <button class="ts disabled icon button">
+                        <i class="user icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="ts fluid vertically padded center aligned big slate">
+        	<img src="https://stoneapp.tech/asset/logo.png" alt="logo" class="logo"/>
+            <span class="header" style="font-size:3em;">Stone App Technology</span>
+            <span class="description" style="font-size:1em;">石頭堆積成山脈，而山脈形成了星球。</span>
+        </div>
+
+        <div class="ts center aligned text container" style="padding-top:25px;padding-bottom:25px;">
+            <h2 class="ts center aligned icon header">
+                <i class="settings icon"></i>
+                <div class="sub header">網頁建置中</div>
+                <div class="sub header">敬請期待</div>
+            </h2>
+        </div>
+
+        <footer>
+            <hr class="unstyled">
+            <div class="ts center aligned text container">
+                <p>Copyright (C) 2018 Stone APP Technology Studio.</p>
+            </div>
+        </footer>
+    </body>
+    <script>
+        
+    </script>
 </html>

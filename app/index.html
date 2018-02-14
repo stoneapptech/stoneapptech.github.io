@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Stone App</title>
+    <!-- Tocas UI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.js"></script>
+    <!-- Tocas UI End -->
+    <style>
+        body {
+                min-height: 100vh;
+                padding-bottom: 114px; /* footer padding */
+            }
+
+        hr {
+            height: 2px;
+            border: none;
+            box-sizing: border-box;
+            border-top: solid rgba(0,0,0,0.5) 2px;
+            padding-bottom: 25px;
+        }
+
+        footer {
+            padding-bottom: 25px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="ts top attached borderless centered fluid link menu">
+        <div class="ts narrow container">
+            <a class="item" href="https://stoneapp.tech"><img src="https://stoneapp.tech/asset/logo.png" alt="logo" style="width:35px;height:35px;margin-right:5px;">Stone App</a>
+            <div class="right menu">
+                <a class="disabled item">Login</a>
+            </div>
+        </div>
+    </div>
+    <div class="ts large heading vertically padded fluid slate">
+        <div class="ts narrow container">
+            <span class="header">Apps</span>
+            <span class="description">We proudly present to you.</span>
+        </div>
+    </div>
+ 
+    <div class="ts attached vertically very padded fluid basic segment" id="webeditor">
+        <div class="ts text container">
+            <div class="ts stackable grid">
+                <div class="four wide column">
+                    <div class="ts center aligned container">
+                        <h2 class="ts centered icon header">
+                            <i class="pencil icon"></i>
+                            <div class="sub header">Webeditor</div>
+                            <div class="sub header">線上即時編輯、預覽網頁。</div>
+                        </h2>
+                    </div>
+                </div>
+                <div class="eight wide column">
+                    <div class="ts basic segment">
+                        <p>Version: <span id="ver">Dev 1.1</span></p>
+                        <p>Libraries : <a>Ace Editor</a> / <a>TocasUI</a> / <a>SweetAlert2</a></p>
+                        <p>All the things on <a href="https://github.com/stoneapptech/webeditor" target="_blank"><i class="github icon"></i>Github</a> !</p>
+                    </div>
+                </div>
+                <div class="four wide column" style="display:flex; align-items:center; justify-content:center;">
+                    <a href="https://app.stoneapp.tech/editor" target="_blank" class="ts inverted primary compact button">Launch App</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ts attached padded fluid tertiary segment">
+        <h2 class="ts center aligned icon header">
+            <i class="code icon"></i>
+            <div class="sub header">開發中</div>
+            <div class="sub header">敬請期待</div>
+        </h2>
+    </div>
+
+    <footer>
+        <hr class="unstyled">
+        <div class="ts center aligned text container">
+            <p>Copyright (C) 2018 Stone APP Technology Studio.</p>
+        </div>
+    </footer>
+</body>
+</html>
