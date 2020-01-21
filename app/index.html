@@ -8,11 +8,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.js"></script>
     <!-- Tocas UI End -->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
     <style>
         body {
                 min-height: 100vh;
                 padding-bottom: 114px; /* footer padding */
             }
+
+        #nav a {
+            font-family: 'Comfortaa', 'Consolas', '微軟正黑體', "Arial", sans-serif;
+        }
+
+        #banner * {
+            font-family: 'Comfortaa', 'Consolas', '微軟正黑體', "Arial", sans-serif;
+        }
 
         hr {
             height: 2px;
@@ -29,23 +38,38 @@
             bottom: 0;
         }
 
-        .launch {
+        .logo {
+            width: 35px;
+            height: 35px;
+            margin-right: 5px;
+        }
+
+        .feature, .launch {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+        }
+
+        .feature > ul > li:not(:last-child) {
+            margin-bottom: 1em;
+        }
+
+        .launch > .ts.button:not(:first-child) {
+            margin-top: 1em;
         }
     </style>
 </head>
 <body>
-    <div class="ts top attached borderless centered fluid link menu">
+    <div class="ts top attached borderless centered fluid link menu" id="nav">
         <div class="ts narrow container">
-            <a class="item" href="https://stoneapp.tech"><img src="../asset/logo.png" alt="logo" style="width:35px;height:35px;margin-right:5px;">Stone App</a>
+            <a class="item" href="https://stoneapp.tech"><img src="../asset/logo.png" alt="logo" class="logo">Stone App</a>
             <div class="right menu">
-                <a class="disabled item">Login</a>
+                <a href="https://github.com/stoenapptech" class="item"><i class="big github icon"></i></a>
             </div>
         </div>
     </div>
-    <div class="ts large heading vertically padded fluid slate">
+    <div class="ts large heading vertically padded fluid slate" id="banner">
         <div class="ts narrow container">
             <span class="header">Apps</span>
             <span class="description">We proudly present to you.</span>
@@ -57,6 +81,7 @@
             <div class="ts stackable grid">
                 <div class="four wide column">
                     <div class="ts center aligned container">
+                        <div class="ts top left attached inverted label">Dev</div>
                         <h2 class="ts centered icon header">
                             <i class="pencil icon"></i>
                             <div class="sub header">Webeditor</div>
@@ -64,15 +89,41 @@
                         </h2>
                     </div>
                 </div>
-                <div class="eight wide column">
-                    <div class="ts basic segment">
-                        <p>Version: <span id="ver">Dev 1.1</span></p>
-                        <p>Libraries : <a>Ace Editor</a> / <a>TocasUI</a> / <a>SweetAlert2</a></p>
-                        <p>All the things on <a href="https://github.com/stoneapptech/webeditor" target="_blank"><i class="github icon"></i>GitHub</a> !</p>
-                    </div>
+                <div class="feature eight wide column">
+                    <ul>
+                        <li>即時編輯: 簡單一按即可預覽畫面</li>
+                        <li>分頁: 將 HTML、CSS、JavaScript 分開編輯</li>
+                    </ul>
                 </div>
                 <div class="launch four wide column">
-                    <a href="https://app.stoneapp.tech/editor" target="_blank" class="ts inverted primary compact button">Launch App</a>
+                    <a href="https://github.com/stoneapptech/webeditor" target="_blank" class="ts inverted compact button"><i class="github icon"></i>GitHub</a>
+                    <a href="https://app.stoneapp.tech/editor/" target="_blank" class="ts inverted primary compact button">Launch App</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ts attached vertically very padded fluid basic segment" id="cavern">
+        <div class="ts text container">
+            <div class="ts stackable grid">
+                <div class="four wide column">
+                    <div class="ts center aligned container">
+                        <div class="ts top left attached info label">Alpha</div>
+                        <h2 class="ts centered icon header">
+                            <i class="file text icon"></i>
+                            <div class="sub header">Cavern</div>
+                            <div class="sub header">簡易、輕量級的部落格系統。</div>
+                        </h2>
+                    </div>
+                </div>
+                <div class="feature eight wide column">
+                    <ul>
+                        <li>與用戶互動: 有按讚、留言功能，甚至還有通知!</li>
+                        <li>Markdown 寫作: 簡易語法，輕鬆上手</li>
+                        <li>自適應式設計: 不論裝置螢幕大小，都有良好使用體驗</li>
+                    </ul>
+                </div>
+                <div class="launch four wide column">
+                    <a href="https://github.com/stoneapptech/cavern" target="_blank" class="ts inverted compact button"><i class="github icon"></i>GitHub</a>
                 </div>
             </div>
         </div>
@@ -88,7 +139,7 @@
     <footer>
         <hr class="unstyled">
         <div class="ts center aligned text container">
-            <p>Copyright (C) 2019 Stone App Technology Studio.</p>
+            <p>Copyright (C) 2020 Stone App Technology Studio.</p>
         </div>
     </footer>
 </body>
