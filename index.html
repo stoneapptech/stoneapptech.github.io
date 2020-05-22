@@ -1,101 +1,290 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant-TW">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- TocasUI: 樣式表 -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
         <meta name="theme-color" content="#B0E0E6">
         <title>Stone App Technology</title>
-        <style>
-            body {
-                min-height: 100vh;
-                padding-bottom:100px; /* footer padding */
-            }
-
-            hr {
-                height:2px;
-                border:none;
-                box-sizing: border-box;
-                border-top: solid rgba(0,0,0,0.5) 2px;
-                padding-bottom:25px;
-            }
-
-            footer {
-                padding-bottom: 25px;
-                width: 100%;
-                position: absolute;
-                bottom:0;
-            }
-
-            #nav a {
-                font-family: 'Comfortaa', 'Consolas', '微軟正黑體', "Arial", sans-serif;
-            }
-
-            #nav .logo {
-                width: 35px;
-                height: 35px;
-                margin-right: 5px;
-            }
-
-            #banner .logo {
-                height: 140px;
-                width: 140px;
-                margin-bottom: 1em;
-            }
-
-            #banner .header {
-                font-size: 3em;
-                font-family: 'Comfortaa', 'Consolas', '微軟正黑體', "Arial", sans-serif;
-            }
-
-            #banner .description {
-                font-size: 1em;
-            }
-
-            #content {
-                padding-top: 25px;
-                padding-bottom: 25px;
-            }
-
-            #content .icon.header i.icon {
-                width: min-content;
-            }
-        </style>
+        <link rel="stylesheet" href="./assets/stoneapp.css">
+        <!-- og meta -->
+        <meta name="description" content="Stone App Technology Studio official site." />
+        <meta property="og:type" content="website" />  
+        <meta property="og:title" content="Stone App Technology Studio." />
+        <meta property="og:description" content="Stone App Technology Studio official site." />
+        <meta property="og:image" content="https://stoneapp.tech/assets/image/logo.png" />
     </head>
     <body>
         <nav class="ts top attached inverted borderless fluid menu" id="nav">
             <div class="ts narrow container">
-                <a class="item" href="https://stoneapp.tech"><img src="./asset/logo.png" alt="logo" class="logo">Stone App</a>
+                <a class="item" href="https://stoneapp.tech"><img src="./assets/logo.png" alt="logo" class="logo">Stone App</a>
                 <div class="right menu">
-                    <a href="https://github.com/stoenapptech" class="item"><i class="big github icon"></i></a>
+                    <a href="https://github.com/stoneapptech" class="item"><i class="big github icon"></i></a>
                 </div>
             </div>
         </nav>
 
         <header class="ts fluid vertically padded center aligned big slate" id="banner">
-        	<img src="./asset/logo.png" alt="logo" class="logo"/>
+        	<img src="./assets/logo.png" alt="logo" class="logo"/>
             <span class="header">Stone App Technology</span>
             <span class="description">石頭堆積成山脈，而山脈形成了星球。</span>
         </header>
 
-        <div class="ts center aligned text container" id="content">
-            <h2 class="ts center aligned icon header">
-                <i class="loading setting icon"></i>
-                <div class="sub header">網頁建置中</div>
-                <div class="sub header">敬請期待</div>
-            </h2>
+        <div class="ts fluid container" id="content">
+            <section class="ts narrow container" id="intro">
+                <div class="ts basic center aligned segment">
+                    <div class="ts big header">
+                        關於我們
+                        <div class="sub header">
+                            由一群志同道合的學生所組成的程式工作室。<br />
+                            目前一起合作開發 project，正試著生出些什麼。
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ts narrow container" id="spirit">
+                <div class="ts basic center aligned segment">
+                    <div class="ts big header">
+                        精神
+                        <div class="sub header">
+                            一些核心價值。
+                        </div>
+                    </div>
+                    <div class="ts three column grid">
+                        <div class="column">
+                            <div class="ts icon header">
+                                <i class="discussions icon"></i>
+                                交流
+                                <div class="sub header">互相交流，增進實力。</div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="ts icon header">
+                                <i class="fork icon"></i>
+                                開源
+                                <div class="sub header">開源貢獻，不吝分享。</div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="ts icon header">
+                                <i class="handshake icon"></i>
+                                合作
+                                <div class="sub header">團隊合作，多人協作。</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ts narrow container" id="app">
+                <div class="ts basic center aligned segment">
+                    <div class="ts big header">
+                        專案
+                        <div class="sub header">
+                            一些成果。
+                        </div>
+                    </div>
+                    <div class="ts stackable three cards">
+                        <a class="ts card" href="https://github.com/stoneapptech/webeditor" target="_blank" rel="noopener">
+                            <div class="padded extra content">
+                                <div class="ts icon header">
+                                    <i class="pencil icon"></i>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="header">Web Editor</div>
+                                <div class="description">
+                                    線上即時編輯、預覽網頁。
+                                </div>
+                            </div>
+                        </a>
+                        <a class="ts card" href="https://github.com/stoneapptech/cavern" target="_blank" rel="noopener">
+                            <div class="padded extra content">
+                                <div class="ts icon header">
+                                    <i class="file text icon"></i>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="header">Cavern</div>
+                                <div class="description">
+                                    簡易、輕量級的 Markdown 部落格系統。
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./app/" class="ts primary inverted card">
+                            <div class="very padded content">
+                                <div class="ts icon header">
+                                    <i class="chevron circle right icon"></i>
+                                    More
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="ts narrow container" id="member">
+                <div class="ts basic segment">
+                    <div class="ts center aligned big header">
+                        成員
+                        <div class="sub header">
+                            各有所長。
+                        </div>
+                    </div>
+                    <div class="ts doubling five cards">
+                        <a href="https://t510599.github.io/" class="ts card" target="_blank" rel="noopener">
+                            <div class="extra content">
+                                <div class="header">Tony Yang</div>
+                                <div class="meta">Web Developer</div>
+                            </div>
+                            <div class="image">
+                                <img class="lazyload" data-src="https://avatars1.githubusercontent.com/u/18533304" alt="t510599" title="t510599">
+                            </div>
+                            <div class="content">
+                                <div class="ts list">
+                                    <div class="item">
+                                        <div class="content">
+                                            <div class="header">Skills</div>
+                                            <div class="description">
+                                                <img class="icon8" src="./assets/icon8/icons8-source-code-30.png" alt="Web" title="Web">
+                                                <img class="icon8" src="./assets/icon8/icons8-javascript.svg" alt="JavaScript" title="JavaScript">
+                                                <img class="icon8" src="./assets/icon8/icons8-php-logo.svg" alt="PHP" title="PHP">
+                                                <img class="icon8" src="./assets/icon8/icons8-server-30.png" alt="Server Management" title="Server Management">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://github.com/a91082900" class="ts card" target="_blank" rel="noopener">
+                            <div class="content">
+                                <div class="header">a91082900</div>
+                                <div class="meta">Developer</div>
+                            </div>
+                            <div class="image">
+                                <img class="lazyload" data-src="https://avatars1.githubusercontent.com/u/20130877" alt="a91082900">
+                            </div>
+                            <div class="content">
+                                <div class="ts list">
+                                    <div class="item">
+                                        <div class="content">
+                                            <div class="header">Skills</div>
+                                            <div class="description">
+                                                <img class="icon8" src="./assets/icon8/icons8-python.svg" alt="Python" title="Python">
+                                                <img class="icon8" src="./assets/icon8/icons8-java.svg" alt="Java" title="Java">
+                                                <img class="icon8" src="./assets/icon8/icons8-android-os.svg" alt="Android" title="Android">
+                                                <img class="icon8" src="./assets/icon8/icons8-microchip-24.png" alt="IOT" title="IOT">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://github.com/secminhr" class="ts card" target="_blank" rel="noopener">
+                            <div class="content">
+                                <div class="header">secminhr</div>
+                                <div class="meta">APP Developer</div>
+                            </div>
+                            <div class="image">
+                                <img class="lazyload" data-src="https://avatars1.githubusercontent.com/u/13201522" alt="secminhr">
+                            </div>
+                            <div class="content">
+                                <div class="ts list">
+                                    <div class="item">
+                                        <div class="content">
+                                            <div class="header">Skills</div>
+                                            <div class="description">
+                                                <img class="icon8" src="./assets/icon8/icons8-java.svg" alt="Java" title="Java">
+                                                <img class="icon8" src="./assets/icon8/icons8-kotlin.svg" alt="Kotlin" title="Kotlin">
+                                                <img class="icon8" src="./assets/icon8/icons8-android-os.svg" alt="Android" title="Android">
+                                                <img class="icon8" src="./assets/icon8/icons8-ios-logo.svg" alt="iOS" title="iOS">
+                                                <img class="icon8" src="./assets/icon8/icons8-python.svg" alt="Python" title="Python">
+                                                <img class="icon8" src="./assets/icon8/icons8-microchip-24.png" alt="IOT" title="IOT">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://aoaaceai.github.io/" class="ts card" target="_blank" rel="noopener">
+                            <div class="content">
+                                <div class="header">aoaaceai</div>
+                                <div class="meta">Developer</div>
+                            </div>
+                            <div class="image">
+                                <img class="lazyload" data-src="https://avatars1.githubusercontent.com/u/54458354" alt="aoaaceai">
+                            </div>
+                            <div class="content">
+                                <div class="ts list">
+                                    <div class="item">
+                                        <div class="content">
+                                            <div class="header">Skills</div>
+                                            <div class="description">
+                                                <img class="icon8" src="./assets/icon8/icons8-java.svg" alt="Java" title="Java">
+                                                <img class="icon8" src="./assets/icon8/icons8-python.svg" alt="Python" title="Python">
+                                                <img class="icon8" src="./assets/icon8/icons8-source-code-30.png" alt="Web" title="Web">
+                                                <img class="icon8" src="./assets/icon8/icons8-rubik's-cube-50.png" alt="Cubing" title="Cubing">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://home.gamer.com.tw/homeindex.php?owner=spacezipper" class="ts card" target="_blank" rel="noopener">
+                            <div class="content">
+                                <div class="header">圭月</div>
+                                <div class="meta">Imagineer</div>
+                            </div>
+                            <div class="image">
+                                <img class="lazyload" data-src="https://avatars1.githubusercontent.com/u/45554005" alt="spacezipper">
+                            </div>
+                            <div class="content">
+                                <div class="ts list">
+                                    <div class="item">
+                                        <div class="content">
+                                            <div class="header">Skills</div>
+                                            <div class="description">
+                                                <img class="icon8" src="./assets/icon8/icons8-machine-learning-24.png" alt="Machine Learning" title="Machine Learning">
+                                                <img class="icon8" src="./assets/icon8/icons8-python.svg" alt="Python" title="Python">
+                                                <img class="icon8" src="./assets/icon8/icons8-project-50.png" alt="Imagineer" title="Imagineer">
+                                                <img class="icon8" src="./assets/icon8/icons8-pixel-cat-50.png" alt="8bit Art" title="8bit Art">
+                                                <img class="icon8" src="./assets/icon8/icons8-quill-pen-64.png" alt="巴哈小說達人" title="巴哈小說達人">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
         </div>
 
-        <footer>
-            <hr class="unstyled">
-            <div class="ts center aligned text container">
-                <p>Copyright (C) 2020 Stone App Technology Studio.</p>
+        <footer class="ts attached very padded fluid inverted segment">
+            <div class="ts narrow container">
+                <div class="ts stackable grid">
+                    <div class="four wide logo column">
+                        <a href="/" class="logo wrapper"><img src="./assets/logo.png" alt="logo" class="logo" /></a>
+                    </div>
+                    <div class="seven wide placeholder column">
+                        <!-- Place Holder -->
+                    </div>
+                    <div class="five wide column">
+                        <div class="ts borderless flatted inverted segment" id="contact">
+                            <p>&copy; 2020 Stone App Technology Studio.</p>
+                            <div class="ts inverted link list">
+                                <a class="item" href="mailto:service@stoneapp.tech" target="_blank" rel="noopener"><i class="mail icon"></i> service@stoneapp.tech</a>
+                                <a class="item" href="https://github.com/stoneapptech" target="_blank" rel="noopener"><i class="github icon"></i> stoneapptech</a>
+                                <a class="item" href="https://hackmd.io/@stoneapp" target="_blank" rel="noopener"><i class="file text icon"></i> stoneapp</a>
+                            </div>
+                            <div class="ts divider"></div>
+                            <p>Skill Icons by <a href="https://icons8.com/">Icons8</a></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </footer>
+        <script src="./assets/lazysizes.min.js"></script>
     </body>
-    <script>
-        
-    </script>
 </html>

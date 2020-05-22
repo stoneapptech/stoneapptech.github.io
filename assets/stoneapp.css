@@ -1,0 +1,89 @@
+:root {
+    --theme: #B0E0E6;
+    --comfortaa: "Comfortaa", "Consolas", "Open Sans", "Microsoft JhengHei", "微軟正黑體", "Arial", sans-serif;
+}
+
+* {
+    /* overwrite TocasUI font */
+    font-family: "Open Sans", "Consolas", "Microsoft JhengHei", "微軟正黑體", "Droid Sans Fallback", Roboto, "Droid Sans", "Arial", sans-serif;
+}
+
+/* nav */
+
+#nav a {
+    font-family: var(--comfortaa);
+}
+
+#nav .logo {
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+}
+
+/* banner */
+
+#banner .logo {
+    height: 140px;
+    width: 140px;
+    margin-bottom: 1em;
+}
+
+#banner .header {
+    font-size: 3em;
+    font-family: var(--comfortaa);
+}
+
+#banner .description {
+    font-size: 1em;
+}
+
+/* content */
+
+#content > section {
+    padding: 1em 0;
+}
+
+#member .ts.card .meta {
+    font-family: var(--comfortaa);
+}
+
+#member .ts.card .ts.list .description {
+    letter-spacing: -0.5em; /* space between icons hack */
+}
+
+img.icon8 {
+    width: 1.18em;
+    height: 1.18em;
+    margin: 0em;
+    margin-right: 0.35rem;
+}
+
+footer .logo.column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a.logo.wrapper {
+    margin-right: auto;
+}
+
+footer img.logo {
+    width: 100px;
+    max-width: 100%;
+}
+
+footer .ts.link.list > a > i.icon {
+    font-size: 1.18em;
+    margin-right: 0.25em;
+}
+
+@media (max-width: 767px) {
+    #banner .header {
+        font-size: 2em;
+    }
+
+    footer a.logo.wrapper {
+        height: unset; 
+    }
+}
