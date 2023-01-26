@@ -1,145 +1,198 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Stone App</title>
-    <!-- Tocas UI -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.js"></script>
-    <!-- Tocas UI End -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TocasUI: 樣式表 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocas/4.1.0/tocas.min.css">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet"> 
+    <meta name="theme-color" content="#B0E0E6">
+    <title>Apps | Stone App</title>
+    <!-- og meta -->
+    <meta name="description" content="石頭堆積成山脈，而山脈形成了星球。" />
+    <meta property="og:type" content="website" />  
+    <meta property="og:title" content="Apps | Stone App Technology Studio." />
+    <meta property="og:description" content="石頭堆積成山脈，而山脈形成了星球。" />
+    <meta property="og:image" content="https://stoneapp.tech/assets/image/logo.png" />
     <style>
         body {
-            min-height: 100vh;
-            padding-bottom: 114px; /* footer padding */
+            font-family: Open Sans, Noto Sans TC, PingFang TC, Helvetica, Microsoft JhengHei, '微軟正黑體', Segoe UI, Segoe, Ubuntu, Meiryo, Droid Sans, Arial, sans-serif;
         }
 
-        #nav a {
-            font-family: 'Comfortaa', 'Consolas', '微軟正黑體', "Arial", sans-serif;
+        .ts-menu .is-not-interactive:hover {
+            cursor: initial;
+            background-color: initial;
         }
 
-        #banner * {
-            font-family: 'Comfortaa', 'Consolas', '微軟正黑體', "Arial", sans-serif;
+        .ts-button.is-primary {
+            background-color: var(--ts-primary-500);
+            border-color: var(--ts-primary-500);
+            color: var(--ts-static-gray-50);
         }
 
-        hr {
-            height: 2px;
-            border: none;
-            box-sizing: border-box;
-            border-top: solid rgba(0,0,0,0.5) 2px;
-            padding-bottom: 25px;
+        #nav a,
+        #nav a:hover,
+        .ts-iconset, .ts-iconset:hover {
+            text-decoration: none;
         }
 
-        footer {
-            padding-bottom: 25px;
-            width: 100%;
-            position: absolute;
-            bottom: 0;
-        }
-
-        .logo {
-            width: 35px;
-            height: 35px;
-            margin-right: 5px;
-        }
-
-        .feature, .launch {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .feature > ul > li:not(:last-child) {
-            margin-bottom: 1em;
-        }
-
-        .launch > .ts.button:not(:first-child) {
-            margin-top: 1em;
+        #footer-logo > img {
+            width: 100px;
+            max-width: 100%;
         }
     </style>
 </head>
 <body>
-    <div class="ts top attached borderless centered fluid link menu" id="nav">
-        <div class="ts narrow container">
-            <a class="item" href="https://stoneapp.tech"><img src="../assets/logo.png" alt="logo" class="logo">Stone App</a>
-            <div class="right menu">
-                <a href="https://github.com/stoenapptech" class="item"><i class="big github icon"></i></a>
+    <nav class="ts-content is-dense" id="nav">
+        <div class="ts-container ts-row is-middle-aligned">
+            <div class="column is-fluid">
+                <a class="ts-header is-medium is-start-icon" href="https://stoneapp.tech" id="logo-title" title="Stone App Technology">
+                    <img class="ts-icon is-huge" src="../assets/logo.png" alt="logo">
+                    Stone App
+                </a>
+            </div>
+            <div class="column">
+                <a class="ts-header is-large is-start-icon" href="https://github.com/stoneapptech" target="_blank" rel="noopener" title="GitHub">
+                    <span class="ts-icon is-huge is-github-icon"></span>
+                </a>
             </div>
         </div>
-    </div>
-    <div class="ts large heading vertically padded fluid slate" id="banner">
-        <div class="ts narrow container">
-            <span class="header">Apps</span>
-            <span class="description">We proudly present to you.</span>
-        </div>
-    </div>
- 
-    <div class="ts attached vertically very padded fluid basic segment" id="webeditor">
-        <div class="ts text container">
-            <div class="ts stackable grid">
-                <div class="four wide column">
-                    <div class="ts center aligned container">
-                        <div class="ts top left attached inverted label">Dev</div>
-                        <h2 class="ts centered icon header">
-                            <i class="pencil icon"></i>
-                            <div class="sub header">Webeditor</div>
-                            <div class="sub header">線上即時編輯、預覽網頁。</div>
-                        </h2>
-                    </div>
-                </div>
-                <div class="feature eight wide column">
-                    <ul>
-                        <li>即時編輯: 簡單一按即可預覽畫面</li>
-                        <li>分頁: 將 HTML、CSS、JavaScript 分開編輯</li>
-                    </ul>
-                </div>
-                <div class="launch four wide column">
-                    <a href="https://github.com/stoneapptech/webeditor" target="_blank" class="ts inverted compact button"><i class="github icon"></i>GitHub</a>
-                    <a href="https://app.stoneapp.tech/editor/" target="_blank" class="ts inverted primary compact button">Launch App</a>
-                </div>
+    </nav>
+
+    <div class="ts-content is-tertiary is-vertically-very-padded" id="banner">
+        <div class="ts-container">
+            <div class="ts-header is-massive" id="banner-title">
+                Apps
             </div>
+            <div class="ts-header is-secondary">We proudly present to you.</div>
         </div>
-    </div>
-    <div class="ts attached vertically very padded fluid basic segment" id="cavern">
-        <div class="ts text container">
-            <div class="ts stackable grid">
-                <div class="four wide column">
-                    <div class="ts center aligned container">
-                        <div class="ts top left attached info label">Alpha</div>
-                        <h2 class="ts centered icon header">
-                            <i class="file text icon"></i>
-                            <div class="sub header">Cavern</div>
-                            <div class="sub header">簡易、輕量級的部落格系統。</div>
-                        </h2>
-                    </div>
-                </div>
-                <div class="feature eight wide column">
-                    <ul>
-                        <li>與用戶互動: 有按讚、留言功能，甚至還有通知!</li>
-                        <li>Markdown 寫作: 簡易語法，輕鬆上手</li>
-                        <li>自適應式設計: 不論裝置螢幕大小，都有良好使用體驗</li>
-                    </ul>
-                </div>
-                <div class="launch four wide column">
-                    <a href="https://github.com/stoneapptech/cavern" target="_blank" class="ts inverted compact button"><i class="github icon"></i>GitHub</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="ts attached padded fluid tertiary segment">
-        <h2 class="ts center aligned icon header">
-            <i class="code icon"></i>
-            <div class="sub header">開發中</div>
-            <div class="sub header">敬請期待</div>
-        </h2>
     </div>
 
-    <footer>
-        <hr class="unstyled">
-        <div class="ts center aligned text container">
-            <p>Copyright (C) 2021 Stone App Technology Studio.</p>
+    <div class="ts-container ts-content is-vertically-very-padded">
+        <div class="ts-wrap is-vertical is-relaxed">
+            <div class="ts-grid is-middle-aligned" id="webeditor">
+                <div class="column is-center-aligned is-4-wide">
+                    <div class="ts-header is-icon">
+                        <span class="ts-icon is-pencil-icon"></span>
+                        Web Editor
+                    </div>
+                    <div class="ts-text">線上即時編輯、預覽網頁。</div>
+                </div>
+                <div class="column is-8-wide">
+                    <div class="ts-list is-unordered">
+                        <div class="item"><span class="ts-text is-heavy">即時編輯</span> - 簡單一按即可預覽畫面</div>
+                        <div class="item"><span class="ts-text is-heavy">分頁</span> - 將 HTML、CSS、JavaScript 分開編輯</div>
+                    </div>
+                </div>
+                <div class="column is-4-wide">
+                    <div class="ts-wrap">
+                        <button class="ts-button is-start-icon">
+                            <span class="ts-icon is-github-icon"></span>
+                            GitHub
+                        </button>
+                        <button class="ts-button is-primary">
+                            Launch App
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ts-divider"></div>
+            
+            <div class="ts-grid is-middle-aligned" id="cavern">
+                <div class="column is-center-aligned is-4-wide">
+                    <div class="ts-header is-icon">
+                        <span class="ts-icon is-file-lines-icon"></span>
+                        Cavern
+                    </div>
+                    <div class="ts-text">簡易、輕量級的部落格系統。</div>
+                </div>
+                <div class="column is-8-wide">
+                    <div class="ts-list is-unordered">
+                        <div class="item"><span class="ts-text is-heavy">與用戶互動</span> - 有按讚、留言功能，甚至還有通知!</div>
+                        <div class="item"><span class="ts-text is-heavy">Markdown 寫作</span> - 簡易語法，輕鬆上手</div>
+                        <div class="item"><span class="ts-text is-heavy">自適應式設計</span> - 不論裝置螢幕大小，都有良好使用體驗</div>
+                    </div>
+                </div>
+                <div class="column is-4-wide">
+                    <div class="ts-wrap">
+                        <button class="ts-button is-start-icon">
+                            <span class="ts-icon is-github-icon"></span>
+                            GitHub
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ts-divider"></div>
+            
+            <div class="ts-grid is-middle-aligned" id="epubconvert">
+                <div class="column is-center-aligned is-4-wide">
+                    <div class="ts-header is-icon">
+                        <span class="ts-icon is-book-icon"></span>
+                        EPUB 簡轉繁
+                    </div>
+                    <div class="ts-text">線上將 EPUB 中的簡體轉換為繁體。</div>
+                </div>
+                <div class="column is-8-wide">
+                    <div class="ts-list is-unordered">
+                        <div class="item"><span class="ts-text is-heavy">簡體轉繁體</span> - 一鍵即可將 EPUB 中的簡體全部轉成繁體</div>
+                        <div class="item"><span class="ts-text is-heavy">即時轉換</span> - 上傳後立刻開始轉換</div>
+                    </div>
+                </div>
+                <div class="column is-4-wide">
+                    <div class="ts-wrap">
+                        <button class="ts-button is-start-icon">
+                            <span class="ts-icon is-github-icon"></span>
+                            GitHub
+                        </button>
+                        <button class="ts-button is-primary">
+                            Launch App
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ts-space is-big"></div>
+
+        <div class="ts-segment">
+            <div class="ts-center">
+                <div class="ts-header is-icon">
+                    <span class="ts-icon is-code-icon"></span>
+                    更多程式開發中
+                </div>
+                <div class="ts-header is-tertiary">敬請期待</div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="ts-content is-tertiary is-vertically-very-padded">
+        <div class="ts-container ts-row">
+            <div class="column is-middle-aligned">
+                <a href="https://stoneapp.tech/">
+                    <div class="ts-image" id="footer-logo">
+                        <img src="../assets/logo.png" alt="logo">
+                    </div>
+                </a>
+            </div>
+            <div class="column is-fluid"></div>
+            <div class="column">
+                <div class="ts-menu is-start-icon is-collapsed is-dense" id="contact">
+                    <div class="item is-not-interactive">&copy; 2023 Stone App Technology Studio.</div>
+                    <a class="item" href="mailto:service@stoneapp.tech" target="_blank" rel="noopener">
+                        <span class="ts-icon is-envelope-icon"></span> service@stoneapp.tech
+                    </a>
+                    <a class="item" href="https://github.com/stoneapptech" target="_blank" rel="noopener">
+                        <span class="ts-icon is-github-icon"></span> stoneapptech
+                    </a>
+                    <a class="item" href="https://hackmd.io/@stoneapp" target="_blank" rel="noopener">
+                        <span class="ts-icon is-file-lines-icon"></span> stoneapp
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 </body>
