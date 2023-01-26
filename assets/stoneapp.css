@@ -1,89 +1,90 @@
-:root {
-    --theme: #B0E0E6;
-    --comfortaa: "Comfortaa", "Consolas", "Open Sans", "Microsoft JhengHei", "微軟正黑體", "Arial", sans-serif;
+/* tocas-ui overwrite/extension */
+body {
+    font-family: Open Sans, Noto Sans TC, PingFang TC, Helvetica, Microsoft JhengHei, '微軟正黑體', Segoe UI, Segoe, Ubuntu, Meiryo, Droid Sans, Arial, sans-serif;
 }
 
-* {
-    /* overwrite TocasUI font */
-    font-family: "Open Sans", "Consolas", "Microsoft JhengHei", "微軟正黑體", "Droid Sans Fallback", Roboto, "Droid Sans", "Arial", sans-serif;
+.ts-box {
+    transition: transform 0.1s linear, box-shadow 0.1s linear;
 }
 
-/* nav */
-
-#nav a {
-    font-family: var(--comfortaa);
+.ts-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 1px 5px 0 #00000024;
 }
 
-#nav .logo {
-    width: 35px;
-    height: 35px;
-    margin-right: 5px;
+.ts-box.is-primary {
+    color: var(--ts-static-gray-75);
+    background-color: var(--ts-primary-500);
 }
 
-/* banner */
-
-#banner .logo {
-    height: 140px;
-    width: 140px;
-    margin-bottom: 1em;
+.ts-menu .is-not-interactive:hover {
+    cursor: initial;
+    background-color: initial;
 }
 
-#banner .header {
-    font-size: 3em;
-    font-family: var(--comfortaa);
+.ts-content.is-vertically-padded,
+.ts-content.is-horizontally-fitted {
+    padding-left: 0;
+    padding-right: 0;
 }
 
-#banner .description {
-    font-size: 1em;
+/* custom rules */
+html[data-scheme=dark] .ts-icon.is-icons8 {
+    /* make dark icons light */
+    filter: invert();
 }
 
-/* content */
-
-#content > section {
-    padding: 1em 0;
+#nav a,
+#nav a:hover {
+    text-decoration: none;
 }
 
-#member .ts.card .meta {
-    font-family: var(--comfortaa);
+#logo-title,
+#banner-title {
+    font-family: 'Comfortaa';
 }
 
-#member .ts.card .ts.list .description {
-    letter-spacing: -0.5em; /* space between icons hack */
-}
-
-img.icon8 {
-    width: 1.18em;
-    height: 1.18em;
-    margin: 0em;
-    margin-right: 0.35rem;
-}
-
-footer .logo.column {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-footer a.logo.wrapper {
-    margin-right: auto;
-}
-
-footer img.logo {
+#footer-logo > img {
     width: 100px;
     max-width: 100%;
 }
 
-footer .ts.link.list > a > i.icon {
-    font-size: 1.18em;
-    margin-right: 0.25em;
+#app-row > *,
+#member-row > * {
+    flex: 1;
 }
 
-@media (max-width: 767px) {
-    #banner .header {
-        font-size: 2em;
+@media screen and (max-width: 993px) {
+    .ts-content.is-dense {
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
     }
 
-    footer a.logo.wrapper {
-        height: unset; 
+    .ts-wrap.is-double-stackable > * {
+        width: 30%;
+    }
+
+    #member-row > * {
+        flex: unset;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ts-wrap.is-stackable {
+        flex-direction: column;
+    }
+
+    .ts-wrap.is-double-stackable > * {
+        width: 45%;
+    }
+
+    #app-row > * {
+        flex: unset;
+    }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    html:not([data-scheme=light]) .ts-icon.is-icons8 {
+        filter: invert();
     }
 }
