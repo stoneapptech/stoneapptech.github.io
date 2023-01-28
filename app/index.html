@@ -48,6 +48,37 @@
             width: 100px;
             max-width: 100%;
         }
+
+        @media screen and (max-width: 766px) {
+            /* app features */
+            #apps > .ts-wrap > .ts-grid > .column:nth-child(2) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            /* app buttons */
+            #apps > .ts-wrap > .ts-grid > .column:nth-child(3) {
+                grid-row: 1/span 2;
+                grid-column-start: -4;
+            }
+        }
+
+        @media screen and (max-width: 512px) {
+            #apps > .ts-wrap > .ts-grid > .column {
+                grid-column: auto/span 16;
+            }
+
+            /* app buttons */
+            #apps > .ts-wrap > .ts-grid > .column:nth-child(3) {
+                grid-column-start: auto;
+                grid-row: auto/span 1;
+            }
+            #apps > .ts-wrap > .ts-grid > .column:nth-child(3) > .ts-wrap {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -76,17 +107,17 @@
         </div>
     </div>
 
-    <div class="ts-container ts-content is-vertically-very-padded">
+    <div class="ts-container ts-content is-vertically-very-padded" id="apps">
         <div class="ts-wrap is-vertical is-relaxed">
             <div class="ts-grid is-middle-aligned" id="webeditor">
-                <div class="column is-center-aligned is-4-wide">
+                <div class="column is-center-aligned is-12-minimal is-4-wide">
                     <div class="ts-header is-icon">
                         <span class="ts-icon is-pencil-icon"></span>
                         Web Editor
                     </div>
                     <div class="ts-text">線上即時編輯、預覽網頁。</div>
                 </div>
-                <div class="column is-8-wide">
+                <div class="column is-12-minimal is-8-wide">
                     <div class="ts-list is-unordered">
                         <div class="item"><span class="ts-text is-heavy">即時編輯</span> - 簡單一按即可預覽畫面</div>
                         <div class="item"><span class="ts-text is-heavy">分頁</span> - 將 HTML、CSS、JavaScript 分開編輯</div>
@@ -108,14 +139,14 @@
             <div class="ts-divider"></div>
             
             <div class="ts-grid is-middle-aligned" id="cavern">
-                <div class="column is-center-aligned is-4-wide">
+                <div class="column is-center-aligned is-12-minimal is-4-wide">
                     <div class="ts-header is-icon">
                         <span class="ts-icon is-file-lines-icon"></span>
                         Cavern
                     </div>
                     <div class="ts-text">簡易、輕量級的部落格系統。</div>
                 </div>
-                <div class="column is-8-wide">
+                <div class="column is-12-minimal is-8-wide">
                     <div class="ts-list is-unordered">
                         <div class="item"><span class="ts-text is-heavy">與用戶互動</span> - 有按讚、留言功能，甚至還有通知!</div>
                         <div class="item"><span class="ts-text is-heavy">Markdown 寫作</span> - 簡易語法，輕鬆上手</div>
@@ -135,14 +166,14 @@
             <div class="ts-divider"></div>
             
             <div class="ts-grid is-middle-aligned" id="epubconvert">
-                <div class="column is-center-aligned is-4-wide">
+                <div class="column is-center-aligned is-12-minimal is-4-wide">
                     <div class="ts-header is-icon">
                         <span class="ts-icon is-book-icon"></span>
                         EPUB 簡轉繁
                     </div>
                     <div class="ts-text">線上將 EPUB 中的簡體轉換為繁體。</div>
                 </div>
-                <div class="column is-8-wide">
+                <div class="column is-12-minimal is-8-wide">
                     <div class="ts-list is-unordered">
                         <div class="item"><span class="ts-text is-heavy">簡體轉繁體</span> - 一鍵即可將 EPUB 中的簡體全部轉成繁體</div>
                         <div class="item"><span class="ts-text is-heavy">即時轉換</span> - 上傳後立刻開始轉換</div>
